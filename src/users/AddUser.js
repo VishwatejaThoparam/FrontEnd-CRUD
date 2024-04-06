@@ -27,8 +27,8 @@ export default function AddUser() {
       alert("Invalid email format");
       return;
     }
-    await axios.post("http://localhost:8080/user", user);
-    // await axios.post("http://fsapplicationcrud-production.up.railway.app/user", user);
+    // await axios.post("http://localhost:8080/user", user);
+    await axios.post("http://api-crud-production-b9bf.up.railway.app/user", user);
     navigate("/");
   };
 

@@ -34,14 +34,14 @@ export default function EditUser() {
       alert("Invalid email error")
       return ;
     }
-    await axios.put(`http://localhost:8080/user/${id}`, user);
-    // await axios.put(`http://fsapplicationcrud-production.up.railway.app/user/${id}`, user);
+    // await axios.put(`http://localhost:8080/user/${id}`, user);
+    await axios.put(`http://api-crud-production-b9bf.up.railway.app/user/${id}`, user);
     navigate("/");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
-    // const result = await axios.get(`http://fsapplicationcrud-production.up.railway.app/user/${id}`);
+    // const result = await axios.get(`http://localhost:8080/user/${id}`);
+    const result = await axios.get(`http://api-crud-production-b9bf.up.railway.app/user/${id}`);
     setUser(result.data);
   };
 
