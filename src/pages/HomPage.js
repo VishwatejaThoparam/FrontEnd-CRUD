@@ -14,15 +14,15 @@ export default function HomePage() {
   },[]);
 
   const loaderUser =async ()=>{
-    const result = await axios.get("http://localhost:8080/getUser")
-    // const result = await axios.get("http://api-crud-production-b9bf.up.railway.app/getUser")
+    // const result = await axios.get("http://localhost:8080/getUser")
+    const result = await axios.get("https://render-crud-backend.onrender.com/getUser")
     setUser(result.data);
    
   }
 
   const deleteUser = async (id)=>{
-    await axios.delete(`http://localhost:8080/user/${id}`)
-    // await axios.delete(`http://api-crud-production-b9bf.up.railway.app/user/${id}`)
+    // await axios.delete(`http://localhost:8080/user/${id}`)
+    await axios.delete(`https://render-crud-backend.onrender.com/user/${id}`)
     loaderUser();
   }
 
